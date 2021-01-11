@@ -1,0 +1,60 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+* {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+.logo {
+  font-family: "shrikhand", "sans-serif";
+}
+
+* {
+  font-family: "Roboto", "sans-serif";
+  font-size: 2vh;
+}
+
+.header__logo {
+  text-align: center;
+  padding: 3vh 25vw;
+}
+
+nav {
+  text-align: center;
+}
+
+.loc {
+  text-align: center;
+  background-color: #EAEAEA;
+  padding: 2vh 0;
+}
+.loc .fas {
+  position: relative;
+  right: 10vw;
+}
+
+footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 2vw;
+}
+footer .logo {
+  margin-bottom: 2vh;
+  font-size: 2.5vh;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .fa-utensils {
+  padding-right: 15px;
+}
+footer .fa-hands-helping {
+  padding-right: 8px;
+}
+
+/*# sourceMappingURL=style.css.map */
