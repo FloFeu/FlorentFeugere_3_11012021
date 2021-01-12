@@ -24,64 +24,72 @@
     </header>
     <section class="menu">
         <h2 class="menu__title">Fonctionnement</h2>
-        <ul>
-            <li><a href="" class="menu__button">
-                    1
-                    </span><i class="fas fa-mobile-alt"></i>
-                    Choisissez un restaurant
-                </a>
-            </li>
-            <li>
-                <a href="" class="menu__button">
-                    2
-                    <i class="fas fa-list"></i>
-                    Composez votre menu
-                </a>
-            </li>
-            <li>
-                <a href="" class="menu__button">
-                    3
-                    <i class="fas fa-store"></i>
-                    Dégustez au restaurant
-                </a>
-            </li>
-
-        </ul>
+        <div>
+            <button class="menu__button">
+                <p class="btn__nbr">1</p>
+                <i class="fas fa-mobile-alt"></i>
+                <p class="btn__txt">Choisissez un restaurant</p>
+                <span class="invis"><i class="fas fa-mobile-alt"></i></span>
+            </button>
+            <button class="menu__button">          
+                <p class="btn__nbr">2</p>
+                <i class="fas fa-list"></i>
+                <p class="btn__txt">Composez votre menu</p>
+                <span class="invis"><i class="fas fa-list"></i></span>
+            </button>
+            <button class="menu__button">   
+                <p class="btn__nbr">3</p>
+                <i class="fas fa-store"></i>
+                <p class="btn__txt">Dégustez au restaurant</p>
+                <span class="invis"><i class="fas fa-store"></i></span>
+            </button>
+        </div>
     </section>
 
     <section class="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
-        <div>
+        <div class="restaurants__cards">
+            
             <a href="menu1.html" class="card">
-                <!-- <img src="lib\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" class="card__img"> -->
+                <p class="notif">Nouveau</p>
+                <img src="lib\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant la palette du goût" class="card__img">
                 <span class="card__banner">
-                    <h3>La palette du goût</h3>
-                    <p>Ménilmontant</p>
-                    <span class="banner__heart"><i class="far fa-heart"></i></span>
+                    <span class="card__txt">
+                        <h3>La palette du goût</h3>
+                        Ménilmontant
+                    </span>
+                    <span class="card__heart"><i class="far fa-heart"></i></span>
                 </span>
             </a>
             <a href="menu2.html" class="card">
-                <img src="" alt="" class="card__img">
+                <p class="notif">Nouveau</p>
+                <img src="lib\restaurants\stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant la note enchantée" class="card__img">
                 <span class="card__banner">
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
-                    <span class="banner__heart"><i class="far fa-heart"></i></span>
+                    <span class="card__txt">
+                        <h3>La note enchantée</h3>
+                        Charonne
+                    </span>
+                    <span class="card__heart"><i class="far fa-heart"></i></span>
                 </span>
             </a>
             <a href="menu3.html" class="card">
-                <img src="" alt="" class="card__img">
+                <img src="lib\restaurants\toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant à la française" class="card__img">
                 <span class="card__banner">
-                    <h3>À la française</h3>
-                    <p>Cité Rouge</p>
-                    <span class="banner__heart"><i class="far fa-heart"></i></span>
+                    <span class="card__txt">
+                        <h3>À la française</h3>
+                        Cité Rouge
+                    </span>
+                    <span class="card__heart"><i class="far fa-heart"></i></span>
                 </span>
             </a>
             <a href="menu4.html" class="card">
-                <img src="" alt="" class="card__img">
+                <img src="lib\restaurants\louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant le délice des sens" class="card__img">
                 <span class="card__banner">
-                    <h3>Le délice des sens</h3>
-                    <p>Folie-Méricourt</p>
-                    <span class="banner__heart"><i class="far fa-heart"></i></span>
+                    <span class="card__txt">
+                        <h3>Le délice des sens</h3>
+                        Folie-Méricourt
+                    </span>
+                    <span class="card__heart"><i class="far fa-heart"></i></span>
                 </span>
             </a>
         </div>

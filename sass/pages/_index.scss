@@ -1,0 +1,46 @@
+.menu{
+    padding: 1em;
+    padding-bottom: 3em;
+    &__title{
+        @extend %title-font-size;
+    }
+
+}
+
+.restaurants{
+    padding: 1em;
+    background-color: $bckgrd-clr-gray;
+    &__title{
+        @extend %title-font-size;
+    }
+    &__cards{
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0;
+        background-color: #FFFFFF;
+        border-radius: 25px;
+        position: relative;
+        &__img{
+            border-radius: 25px 25px 0 0px;
+            object-fit: cover;
+            object-position: center;
+            height: 60vw;;
+            
+        }
+        &__banner{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            padding: 1em;
+        }
+        &__heart{
+            margin: auto 0;
+            font-size: 1.2em;
+        }
+    }
+    .notif{
+        @extend %notif;
+    }
+}

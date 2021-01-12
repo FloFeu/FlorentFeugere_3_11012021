@@ -1,0 +1,51 @@
+.nav__btn{
+    color: #fff;
+    padding: 1em 1.5em;
+    border-radius: 45px;
+    border: hidden;
+    @extend %button-font;
+    background-image: linear-gradient($color-secondary, $color-primary);   
+    &:hover{
+        background-image: linear-gradient($lighten-color-secondary, $lighten-color-primary)
+    }
+}
+
+.menu__button{
+    width: 100%;
+    display: flex;
+    background-color: $bckgrd-clr-gray;
+    border: none;
+    padding: 1.5em;
+    border-radius: 20px;
+    margin-top: 1em;
+    @extend %button-font;
+    .fas{
+        color: #7E7E7E;
+        float: initial;
+    }
+    .btn__nbr{
+        color: #FFFFFF;
+        background-color: $color-primary;
+        position: relative;
+        right: 40px;
+        border-radius: 90px;
+        padding: 2px 7px;
+        font-size: 1.1rem;
+    }
+    .btn__txt{
+        flex: 1;
+        font-weight:600;
+    }
+    .invis .fas{
+        color: $bckgrd-clr-gray;
+    }
+    &:hover{
+        background-color: lighten($color-primary, 35%);
+        & .fas{
+            color: $color-primary;
+        }
+        & .invis .fas{
+            color: lighten($color-primary, 35%);
+        }
+    }
+}

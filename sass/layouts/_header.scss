@@ -3,16 +3,28 @@
     padding: 3vh 25vw;    
 }
 
-nav{
+.nav{
     text-align: center;
+    padding: 3rem;
+    background-color: $bckgrd-clr-gray;
+    h1{
+        @extend %title-font-size;
+    }
+    p{
+        color: #717171;
+        padding: 1em 2em 2em 1em;
+    }
+    
 }
 
 .loc{
     text-align: center;
-    background-color: #EAEAEA;
+    background-color: $bckgrd-clr-dgray;
     padding: 2vh 0;
+    font-weight: 600;
+    color: #353535;
     .fas{
         position: relative;
-        right: 10vw;
+        right: 3vw;
     }
 }

@@ -1,0 +1,13 @@
+%notif{
+    padding: 0.5em 1em;
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 40%);
+    font-size: 0.8rem;
+    font-weight: 600;   
+    display: inline;
+    z-index: 1;
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+    
+}
