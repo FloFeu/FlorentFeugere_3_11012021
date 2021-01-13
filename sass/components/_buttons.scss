@@ -1,12 +1,14 @@
 .nav__btn{
     color: #fff;
-    padding: 1em 1.5em;
+    padding: 0.8em 1.5em;
     border-radius: 45px;
     border: hidden;
+    @include box-shadow(#C5C5C5);
     @extend %button-font;
     background-image: linear-gradient($color-secondary, $color-primary);   
     &:hover{
-        background-image: linear-gradient($lighten-color-secondary, $lighten-color-primary)
+        background-image: linear-gradient($lighten-color-secondary, $lighten-color-primary);
+        @include box-shadow-hover(#C5C5C5);
     }
 }
 
@@ -19,6 +21,7 @@
     border-radius: 20px;
     margin-top: 1em;
     @extend %button-font;
+    @include box-shadow($bckgrd-clr-dgray);
     .fas{
         color: #7E7E7E;
         float: initial;
@@ -40,6 +43,7 @@
         color: $bckgrd-clr-gray;
     }
     &:hover{
+        @include box-shadow-hover($bckgrd-clr-dgray);
         background-color: lighten($color-primary, 35%);
         & .fas{
             color: $color-primary;
@@ -48,4 +52,15 @@
             color: lighten($color-primary, 35%);
         }
     }
+}
+
+.card__heart{
+    border: none;
+    padding: 0;
+    background-color: #FFF;
+    .far{        
+        &:hover{
+            color: linear-gradient($color-secondary, $color-primary);
+        }
+    }    
 }

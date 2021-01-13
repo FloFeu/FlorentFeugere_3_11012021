@@ -51,15 +51,30 @@ h3 {
   font-weight: 600;
 }
 
+.page__section .title {
+  font-family: "Shrikhand";
+  font-size: 1.8rem;
+  padding-bottom: 0.8em;
+}
+
+h2 {
+  font-weight: 100;
+  color: #404040;
+  position: relative;
+  padding-bottom: 0.5em;
+}
+
 .nav__btn {
   color: #fff;
-  padding: 1em 1.5em;
+  padding: 0.8em 1.5em;
   border-radius: 45px;
   border: hidden;
+  box-shadow: 0 5px 5px #C5C5C5;
   background-image: linear-gradient(#FF79DA, #9356DC);
 }
 .nav__btn:hover {
   background-image: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0 12px 10px #C5C5C5;
 }
 
 .menu__button {
@@ -70,6 +85,7 @@ h3 {
   padding: 1.5em;
   border-radius: 20px;
   margin-top: 1em;
+  box-shadow: 0 5px 5px #EAEAEA;
 }
 .menu__button .fas {
   color: #7E7E7E;
@@ -92,6 +108,7 @@ h3 {
   color: #F6F6F6;
 }
 .menu__button:hover {
+  box-shadow: 0 12px 10px #EAEAEA;
   background-color: #f2eafb;
 }
 .menu__button:hover .fas {
@@ -101,9 +118,21 @@ h3 {
   color: #f2eafb;
 }
 
+.card__heart {
+  border: none;
+  padding: 0;
+  background-color: #FFF;
+}
+.card__heart .far:hover {
+  color: linear-gradient(#FF79DA, #9356DC);
+}
+
 .header__logo {
   text-align: center;
   padding: 3vh 25vw;
+  box-shadow: 0 5px 5px #d2d2d2;
+  position: relative;
+  /** pour faire apparaitre l'ombre **/
 }
 
 .nav {
@@ -126,6 +155,27 @@ h3 {
 .loc .fas {
   position: relative;
   right: 3vw;
+}
+
+.menu__pages nav {
+  display: flex;
+  padding: 2vh 2em 2vh 2em;
+  justify-content: space-between;
+}
+.menu__pages nav a {
+  margin: auto 0;
+  font-size: 3vmax;
+}
+.menu__pages nav img {
+  padding: 0 17vw;
+}
+.menu__pages .invis__menu {
+  color: #fff;
+}
+.menu__pages .rest__pic {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
 footer {
@@ -152,6 +202,10 @@ footer .fa-hands-helping {
   padding: 1em;
   padding-bottom: 3em;
 }
+.menu div {
+  margin: 1em;
+}
+
 .restaurants {
   padding: 1em;
   background-color: #F6F6F6;
@@ -163,6 +217,7 @@ footer .fa-hands-helping {
   background-color: #FFFFFF;
   border-radius: 25px;
   position: relative;
+  box-shadow: 0 5px 5px #E5E5E5;
 }
 .restaurants .card__img {
   border-radius: 25px 25px 0 0px;
@@ -179,6 +234,53 @@ footer .fa-hands-helping {
 .restaurants .card__heart {
   margin: auto 0;
   font-size: 1.2em;
+}
+.restaurants .card:hover {
+  box-shadow: 0 12px 10px #E5E5E5;
+}
+.page__section {
+  position: relative;
+  top: -50px;
+  border-radius: 25px 25px 0 0;
+  background-color: #F6F6F6;
+  padding: 1em;
+}
+.page__section .title .far {
+  float: right;
+  position: relative;
+  padding: 5px 5px;
+}
+.page__section .order__btn {
+  text-align: center;
+}
+.page__section h2::before {
+  content: "";
+  position: absolute;
+  background-color: #99E2D0;
+  width: 35px;
+  height: 3px;
+  bottom: 3px;
+}
+.page__section .choix button {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0.8em;
+  padding: 1em 1em;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-family: "Roboto";
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  box-shadow: 0 5px 5px #e8e8e8;
+}
+.page__section .choix button h3 {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+.page__section .choix button .price {
+  float: right;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+.page__section{
+    position: relative;
+    top: -50px;
+    border-radius: 25px 25px 0 0;
+    background-color: $bckgrd-clr-gray;
+    padding: 1em;
+    .title{
+        @extend %restaurant-name;
+        .far{
+          float: right;
+          position: relative;
+          padding: 5px 5px
+        }
+    }
+    .order__btn{
+        text-align: center;
+    }
+    h2::before{
+        content: "";
+        position: absolute;
+        background-color: $color-tertiary;
+        width: 35px;
+        height: 3px;
+        bottom: 3px;
+    }
+    .choix{
+        
+        button{
+            width: 100%;
+            text-align: left;
+            margin-bottom: 0.8em;
+            padding: 1em 1em;
+            background-color: #fff;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Roboto';
+            font-size: 1rem;
+            text-overflow: ellipsis;
+            @include box-shadow(#e8e8e8);
+            h3{
+                font-size: 1.1rem;
+                font-weight: 900;
+            }
+            .price{
+                float: right;
+                font-weight: 600;
+            }
+        }
+    }
+}

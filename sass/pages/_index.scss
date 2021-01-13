@@ -4,6 +4,9 @@
     &__title{
         @extend %title-font-size;
     }
+    div{
+        margin: 1em;
+    }
 
 }
 
@@ -13,8 +16,6 @@
     &__title{
         @extend %title-font-size;
     }
-    &__cards{
-    }
     .card{
         display: flex;
         flex-direction: column;
@@ -22,6 +23,7 @@
         background-color: #FFFFFF;
         border-radius: 25px;
         position: relative;
+        @include box-shadow(#E5E5E5);
         &__img{
             border-radius: 25px 25px 0 0px;
             object-fit: cover;
@@ -34,10 +36,14 @@
             justify-content: space-between;
             align-content: center;
             padding: 1em;
+            
         }
         &__heart{
             margin: auto 0;
             font-size: 1.2em;
+        }
+        &:hover{
+            @include box-shadow-hover(#E5E5E5);
         }
     }
     .notif{

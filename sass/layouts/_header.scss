@@ -1,6 +1,8 @@
 .header__logo{
     text-align: center;
-    padding: 3vh 25vw;    
+    padding: 3vh 25vw;
+    @include box-shadow(#d2d2d2);    
+    position: relative; /** pour faire apparaitre l'ombre **/
 }
 
 .nav{
@@ -26,5 +28,30 @@
     .fas{
         position: relative;
         right: 3vw;
+    }
+}
+
+.menu__pages{
+    nav{
+        display: flex;
+        padding: 2vh 2em 2vh 2em;        
+        justify-content: space-between;
+        a{
+            margin: auto 0;
+            font-size: 3vmax;
+        }
+        img{
+            padding: 0 17vw;            
+        }
+    }
+    .invis__menu{
+        color: #fff;
+    }
+    .rest__pic{
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+
+
     }
 }
