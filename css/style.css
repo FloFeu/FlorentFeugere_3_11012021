@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 .restaurants .notif {
   padding: 0.5em 1em;
   background-color: #99E2D0;
@@ -24,8 +25,6 @@ ul {
 
 body {
   font-family: "Roboto", "sans-serif";
-  font-size: 1.2rem;
-  font-size: 100;
 }
 
 .logo {
@@ -37,11 +36,6 @@ body {
   font-weight: 900;
 }
 
-.menu__button, .nav__btn {
-  font-size: 1.3rem;
-  font-family: Roboto;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -51,7 +45,7 @@ h3 {
   font-weight: 600;
 }
 
-.page__section .title {
+.page__section .title h1 {
   font-family: "Shrikhand";
   font-size: 1.8rem;
   padding-bottom: 0.8em;
@@ -59,7 +53,7 @@ h3 {
 
 h2 {
   font-weight: 100;
-  color: #404040;
+  color: black;
   position: relative;
   padding-bottom: 0.5em;
 }
@@ -69,6 +63,7 @@ h2 {
   padding: 0.8em 1.5em;
   border-radius: 45px;
   border: hidden;
+  font-size: 19px;
   box-shadow: 0 5px 5px #C5C5C5;
   background-image: linear-gradient(#FF79DA, #9356DC);
 }
@@ -77,54 +72,58 @@ h2 {
   box-shadow: 0 12px 10px #C5C5C5;
 }
 
-.menu__button {
-  width: 100%;
+.running__card {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.running__card .etape {
+  position: relative;
+  margin: 1em;
+}
+.running__card .btn__nbr {
+  background-color: #9356DC;
+  border-radius: 100%;
+  padding: 2px 7px;
+  width: fit-content;
+  position: absolute;
+  color: #FFF;
+  top: 1.6em;
+  left: -10px;
+}
+.running__card .menu__button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  padding: 1.3em 2em;
   background-color: #F6F6F6;
   border: none;
-  padding: 1.5em;
   border-radius: 20px;
-  margin-top: 1em;
   box-shadow: 0 5px 5px #EAEAEA;
+  width: 350px;
+  font-size: 19px;
 }
-.menu__button .fas {
+.running__card .menu__button .fas {
   color: #7E7E7E;
-  float: initial;
 }
-.menu__button .btn__nbr {
-  color: #FFFFFF;
-  background-color: #9356DC;
-  position: relative;
-  right: 40px;
-  border-radius: 90px;
-  padding: 2px 7px;
-  font-size: 1.1rem;
-}
-.menu__button .btn__txt {
-  flex: 1;
-  font-weight: 600;
-}
-.menu__button .invis .fas {
+.running__card .menu__button .invis .fas {
   color: #F6F6F6;
 }
-.menu__button:hover {
+.running__card .menu__button:hover {
   box-shadow: 0 12px 10px #EAEAEA;
   background-color: #f2eafb;
 }
-.menu__button:hover .fas {
+.running__card .menu__button:hover .fas {
   color: #9356DC;
 }
-.menu__button:hover .invis .fas {
+.running__card .menu__button:hover .invis .fas {
   color: #f2eafb;
 }
 
-.card__heart {
-  border: none;
-  padding: 0;
-  background-color: #FFF;
-}
-.card__heart .far:hover {
-  color: linear-gradient(#FF79DA, #9356DC);
+.fa-heart {
+  font-size: 1.8em;
+  margin: auto 0;
 }
 
 .header__logo {
@@ -210,20 +209,26 @@ footer .fa-hands-helping {
   padding: 1em;
   background-color: #F6F6F6;
 }
+.restaurants .restaurants__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 .restaurants .card {
   display: flex;
   flex-direction: column;
-  margin: 1em 0;
+  margin: 1em;
   background-color: #FFFFFF;
   border-radius: 25px;
   position: relative;
   box-shadow: 0 5px 5px #E5E5E5;
+  width: 300px;
 }
 .restaurants .card__img {
   border-radius: 25px 25px 0 0px;
   object-fit: cover;
   object-position: center;
-  height: 60vw;
+  height: 200px;
 }
 .restaurants .card__banner {
   display: flex;
@@ -231,9 +236,8 @@ footer .fa-hands-helping {
   align-content: center;
   padding: 1em;
 }
-.restaurants .card__heart {
+.restaurants .card .card__heart {
   margin: auto 0;
-  font-size: 1.2em;
 }
 .restaurants .card:hover {
   box-shadow: 0 12px 10px #E5E5E5;
@@ -245,13 +249,10 @@ footer .fa-hands-helping {
   background-color: #F6F6F6;
   padding: 1em;
 }
-.page__section .title .far {
-  float: right;
-  position: relative;
-  padding: 5px 5px;
-}
-.page__section .order__btn {
-  text-align: center;
+.page__section .title {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1em;
 }
 .page__section h2::before {
   content: "";
@@ -261,26 +262,47 @@ footer .fa-hands-helping {
   height: 3px;
   bottom: 3px;
 }
-.page__section .choix button {
-  width: 100%;
-  text-align: left;
-  margin-bottom: 0.8em;
-  padding: 1em 1em;
-  background-color: #fff;
-  border: none;
-  border-radius: 15px;
-  font-family: "Roboto";
-  font-size: 1rem;
-  text-overflow: ellipsis;
-  box-shadow: 0 5px 5px #e8e8e8;
+.page__section .menus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
-.page__section .choix button h3 {
-  font-size: 1.1rem;
-  font-weight: 900;
+.page__section .menus__menu {
+  width: 350px;
+  margin: 5px;
 }
-.page__section .choix button .price {
-  float: right;
+.page__section .menus__menu .menu__card {
+  background-color: white;
+  margin: 1em 0;
+  padding: 1em 0.8em;
+  border-radius: 20px;
+  display: grid;
+  grid-template-areas: "title ." "description price";
+  grid-template-columns: auto auto;
+  grid-gap: 5px;
+}
+.page__section .menus__menu .menu__card .menu__card--title {
+  grid-area: title;
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.page__section .menus__menu .menu__card .menu__card--description {
+  grid-area: description;
+  font-weight: 200;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.page__section .menus__menu .menu__card .menu__card--price {
+  grid-area: price;
+  justify-self: end;
+}
+.page__section .order__btn {
+  text-align: center;
+  padding-top: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

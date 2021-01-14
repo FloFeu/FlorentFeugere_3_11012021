@@ -16,32 +16,38 @@
     &__title{
         @extend %title-font-size;
     }
+    .restaurants__cards{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+
+    }
     .card{
         display: flex;
         flex-direction: column;
-        margin: 1em 0;
+        margin: 1em;
         background-color: #FFFFFF;
         border-radius: 25px;
         position: relative;
         @include box-shadow(#E5E5E5);
+        width: 300px;
         &__img{
             border-radius: 25px 25px 0 0px;
             object-fit: cover;
             object-position: center;
-            height: 60vw;;
-            
+            height: 200px;;
         }
         &__banner{
             display: flex;
             justify-content: space-between;
             align-content: center;
             padding: 1em;
-            
         }
-        &__heart{
+        .card__heart{
             margin: auto 0;
-            font-size: 1.2em;
         }
+        
         &:hover{
             @include box-shadow-hover(#E5E5E5);
         }

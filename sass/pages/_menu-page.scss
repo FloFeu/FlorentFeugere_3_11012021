@@ -5,15 +5,13 @@
     background-color: $bckgrd-clr-gray;
     padding: 1em;
     .title{
-        @extend %restaurant-name;
-        .far{
-          float: right;
-          position: relative;
-          padding: 5px 5px
+        display: flex;
+        justify-content: space-between;
+        padding-right: 1em;
+        h1{
+            @extend %restaurant-name;
         }
-    }
-    .order__btn{
-        text-align: center;
+        
     }
     h2::before{
         content: "";
@@ -23,28 +21,52 @@
         height: 3px;
         bottom: 3px;
     }
-    .choix{
-        
-        button{
-            width: 100%;
-            text-align: left;
-            margin-bottom: 0.8em;
-            padding: 1em 1em;
-            background-color: #fff;
-            border: none;
-            border-radius: 15px;
-            font-family: 'Roboto';
-            font-size: 1rem;
-            text-overflow: ellipsis;
-            @include box-shadow(#e8e8e8);
-            h3{
-                font-size: 1.1rem;
-                font-weight: 900;
-            }
-            .price{
-                float: right;
-                font-weight: 600;
+    .menus{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        &__menu{
+            width: 350px;
+            margin: 5px;
+            .menu__card{
+                background-color: white;
+                margin: 1em 0;
+                padding: 1em 0.8em;
+                border-radius: 20px;
+                display: grid;
+                grid-template-areas: "title ." "description price";
+                grid-template-columns: auto auto;
+                grid-gap: 5px;
+                
+                .menu__card--title{
+                    grid-area: title;
+                    font-weight:600;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .menu__card--description{
+                    grid-area: description;
+                    font-weight: 200;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .menu__card--price{
+                    grid-area: price;
+                    justify-self: end;
+
+
+                }
+                
+
             }
         }
+        
+    }
+    .order__btn{
+        text-align: center;
+        padding-top: 1em;
     }
 }
