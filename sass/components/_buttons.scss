@@ -13,63 +13,7 @@
     }
 }
 
-section.menu{
-    margin:0;
-    padding: 0;
-    .menu__title{
-        padding: 1em;
-        padding-bottom: 0;
-    } 
-    .running__card{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        .etape{
-            position: relative;
-            margin: 1em 2%;
-            width: 300px;
-        }
-        .btn__nbr{
-            background-color: $color-primary;
-            border-radius: 100%;
-            padding: 2px 7px;
-            width: fit-content;
-            position: absolute;
-            color: #FFF;
-            top: 1.6em;
-            left: -10px;
-        }
-        .menu__button{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: center;
-            padding: 1.3em;
-            background-color: $bckgrd-clr-gray;
-            border: none;
-            border-radius: 20px;
-            @include box-shadow($bckgrd-clr-dgray);
-            font-size: 19px;
-            .fas{
-                color: #7E7E7E;
-            }
-            .invis .fas{
-                color: $bckgrd-clr-gray;
-            }
-            &:hover{
-                @include box-shadow-hover($bckgrd-clr-dgray);
-                background-color: lighten($color-primary, 35%);
-                & .fas{
-                    color: $color-primary;
-                }
-                & .invis .fas{
-                    color: lighten($color-primary, 35%);
-                }
-            }
-        }
-    }
-}
+
 
 .fa-heart{
     font-size: 1.8em;

@@ -9,6 +9,27 @@
     text-align: center;
     padding: 3rem ;
     background-color: $bckgrd-clr-gray;
+    @include desktop{
+        padding: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        h1{
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 1em;
+        }
+        p{
+            width: 50%;
+            margin: auto;
+            padding: 0;
+        }
+        .nav__btn{
+            margin: auto;
+            width: 35%;
+            padding: 1em;
+        }
+    }
+
     h1{
         @extend %title-font-size;
     }
@@ -52,6 +73,9 @@
         width: 100%;
         height: 250px;
         object-fit: cover;
+        @include desktop{
+            height: 320px;
+        }
 
 
     }

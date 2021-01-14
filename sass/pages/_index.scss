@@ -1,9 +1,71 @@
-.menu{
-    margin: 0 1em;
+
+section.menu{
     padding: 1em;
     padding-bottom: 3em;
-    &__title{
+    .menu__title{
         @extend %title-font-size;
+    }
+    .running__card{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include desktop{
+            justify-content: space-evenly;
+            padding: 0 5%;
+        }
+        .etape{
+            position: relative;
+            margin: 1em 2%;
+            width: 300px;
+            @include tablet{
+                width: 350px;
+            }
+        }
+        .btn__nbr{
+            background-color: $color-primary;
+            border-radius: 100%;
+            padding: 2px 7px;
+            width: fit-content;
+            position: absolute;
+            color: #FFF;
+            top: 1.6em;
+            left: -10px;
+        }
+        .menu__button{
+            width: 300px;
+            @include tablet{
+                width: 350px;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: center;
+            padding: 1.3em;
+            background-color: $bckgrd-clr-gray;
+            border: none;
+            border-radius: 20px;
+            @include box-shadow($bckgrd-clr-dgray);
+            font-size: 19px;
+            .fas{
+                color: #7E7E7E;
+            }
+            .btn__txt{
+                // 
+            }
+            .invis .fas{
+                color: $bckgrd-clr-gray;
+            }
+            &:hover{
+                @include box-shadow-hover($bckgrd-clr-dgray);
+                background-color: lighten($color-primary, 35%);
+                & .fas{
+                    color: $color-primary;
+                }
+                & .invis .fas{
+                    color: lighten($color-primary, 35%);
+                }
+            }
+        }
     }
 }
 

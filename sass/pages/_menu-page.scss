@@ -39,6 +39,9 @@
         &__menu{
             width: 350px;
             margin: 5px;
+            @include desktop{
+                width: 30%;
+            }
             .menu__card{
                 background-color: white;
                 margin: 1em 0;

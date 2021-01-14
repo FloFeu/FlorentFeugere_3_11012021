@@ -14,8 +14,10 @@
   top: 1.5em;
 }
 
-* {
-  margin: 0;
+@media (min-width: 1025px) {
+  body {
+    margin: 0 100px;
+  }
 }
 
 body {
@@ -26,7 +28,7 @@ body {
   font-family: "shrikhand", "sans-serif";
 }
 
-.restaurants__title, .menu__title, .nav h1 {
+.restaurants__title, section.menu .menu__title, .nav h1 {
   font-size: 1.8rem;
   font-weight: 900;
 }
@@ -67,64 +69,6 @@ h2 {
   box-shadow: 0 12px 10px #C5C5C5;
 }
 
-section.menu {
-  margin: 0;
-  padding: 0;
-}
-section.menu .menu__title {
-  padding: 1em;
-  padding-bottom: 0;
-}
-section.menu .running__card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-section.menu .running__card .etape {
-  position: relative;
-  margin: 1em 2%;
-  width: 300px;
-}
-section.menu .running__card .btn__nbr {
-  background-color: #9356DC;
-  border-radius: 100%;
-  padding: 2px 7px;
-  width: fit-content;
-  position: absolute;
-  color: #FFF;
-  top: 1.6em;
-  left: -10px;
-}
-section.menu .running__card .menu__button {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: center;
-  padding: 1.3em;
-  background-color: #F6F6F6;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 5px 5px #EAEAEA;
-  font-size: 19px;
-}
-section.menu .running__card .menu__button .fas {
-  color: #7E7E7E;
-}
-section.menu .running__card .menu__button .invis .fas {
-  color: #F6F6F6;
-}
-section.menu .running__card .menu__button:hover {
-  box-shadow: 0 12px 10px #EAEAEA;
-  background-color: #f2eafb;
-}
-section.menu .running__card .menu__button:hover .fas {
-  color: #9356DC;
-}
-section.menu .running__card .menu__button:hover .invis .fas {
-  color: #f2eafb;
-}
-
 .fa-heart {
   font-size: 1.8em;
   margin: auto 0;
@@ -142,6 +86,28 @@ section.menu .running__card .menu__button:hover .invis .fas {
   text-align: center;
   padding: 3rem;
   background-color: #F6F6F6;
+}
+@media (min-width: 1025px) {
+  .nav {
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .nav h1 {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 1em;
+  }
+  .nav p {
+    width: 50%;
+    margin: auto;
+    padding: 0;
+  }
+  .nav .nav__btn {
+    margin: auto;
+    width: 35%;
+    padding: 1em;
+  }
 }
 .nav p {
   color: #717171;
@@ -181,6 +147,11 @@ section.menu .running__card .menu__button:hover .invis .fas {
   height: 250px;
   object-fit: cover;
 }
+@media (min-width: 1025px) {
+  .menu__pages .rest__pic {
+    height: 320px;
+  }
+}
 
 footer {
   background-color: #353535;
@@ -201,12 +172,84 @@ footer .fa-utensils {
 footer .fa-hands-helping {
   padding-right: 8px;
 }
+@media (min-width: 641px) {
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+  }
+}
 
-.menu {
-  margin: 0 1em;
+section.menu {
   padding: 1em;
   padding-bottom: 3em;
 }
+section.menu .running__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (min-width: 1025px) {
+  section.menu .running__card {
+    justify-content: space-evenly;
+    padding: 0 5%;
+  }
+}
+section.menu .running__card .etape {
+  position: relative;
+  margin: 1em 2%;
+  width: 300px;
+}
+@media (min-width: 641px) {
+  section.menu .running__card .etape {
+    width: 350px;
+  }
+}
+section.menu .running__card .btn__nbr {
+  background-color: #9356DC;
+  border-radius: 100%;
+  padding: 2px 7px;
+  width: fit-content;
+  position: absolute;
+  color: #FFF;
+  top: 1.6em;
+  left: -10px;
+}
+section.menu .running__card .menu__button {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  padding: 1.3em;
+  background-color: #F6F6F6;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px #EAEAEA;
+  font-size: 19px;
+}
+@media (min-width: 641px) {
+  section.menu .running__card .menu__button {
+    width: 350px;
+  }
+}
+section.menu .running__card .menu__button .fas {
+  color: #7E7E7E;
+}
+section.menu .running__card .menu__button .invis .fas {
+  color: #F6F6F6;
+}
+section.menu .running__card .menu__button:hover {
+  box-shadow: 0 12px 10px #EAEAEA;
+  background-color: #f2eafb;
+}
+section.menu .running__card .menu__button:hover .fas {
+  color: #9356DC;
+}
+section.menu .running__card .menu__button:hover .invis .fas {
+  color: #f2eafb;
+}
+
 .restaurants {
   margin-top: 2em;
   padding: 1em;
@@ -285,6 +328,11 @@ footer .fa-hands-helping {
 .page__section .menus__menu {
   width: 350px;
   margin: 5px;
+}
+@media (min-width: 1025px) {
+  .page__section .menus__menu {
+    width: 30%;
+  }
 }
 .page__section .menus__menu .menu__card {
   background-color: white;
