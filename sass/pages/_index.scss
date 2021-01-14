@@ -1,16 +1,14 @@
 .menu{
+    margin: 0 1em;
     padding: 1em;
     padding-bottom: 3em;
     &__title{
         @extend %title-font-size;
     }
-    div{
-        margin: 1em;
-    }
-
 }
 
 .restaurants{
+    margin-top: 2em;
     padding: 1em;
     background-color: $bckgrd-clr-gray;
     &__title{

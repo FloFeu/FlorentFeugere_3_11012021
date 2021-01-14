@@ -7,7 +7,7 @@
 
 .nav{
     text-align: center;
-    padding: 3rem;
+    padding: 3rem ;
     background-color: $bckgrd-clr-gray;
     h1{
         @extend %title-font-size;
@@ -34,7 +34,7 @@
 .menu__pages{
     nav{
         display: flex;
-        padding: 2vh 2em 2vh 2em;        
+        padding: 2vh 1em;        
         justify-content: space-between;
         a{
             margin: auto 0;
@@ -45,7 +45,8 @@
         }
     }
     .invis__menu{
-        color: #fff;
+        color: #FFF;
+        font-size: 3vmax;
     }
     .rest__pic{
         width: 100%;

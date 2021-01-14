@@ -1,3 +1,10 @@
+.menu__body{
+    background-color: $bckgrd-clr-gray;
+    header{
+        background-color: white;
+    }
+}
+
 .page__section{
     position: relative;
     top: -50px;
@@ -8,10 +15,13 @@
         display: flex;
         justify-content: space-between;
         padding-right: 1em;
+        padding-bottom: 1em;        
         h1{
             @extend %restaurant-name;
         }
-        
+        p{
+            margin: auto 0;
+        }
     }
     h2::before{
         content: "";
@@ -25,7 +35,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: center;
+        align-items: baseline;
         &__menu{
             width: 350px;
             margin: 5px;
@@ -38,7 +48,7 @@
                 grid-template-areas: "title ." "description price";
                 grid-template-columns: auto auto;
                 grid-gap: 5px;
-                
+                @include box-shadow(#E8E8E8);
                 .menu__card--title{
                     grid-area: title;
                     font-weight:600;
@@ -56,14 +66,10 @@
                 .menu__card--price{
                     grid-area: price;
                     justify-self: end;
-
-
+                    font-weight: 600;
                 }
-                
-
             }
         }
-        
     }
     .order__btn{
         text-align: center;

@@ -18,11 +18,6 @@
   margin: 0;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-}
-
 body {
   font-family: "Roboto", "sans-serif";
 }
@@ -48,7 +43,6 @@ h3 {
 .page__section .title h1 {
   font-family: "Shrikhand";
   font-size: 1.8rem;
-  padding-bottom: 0.8em;
 }
 
 h2 {
@@ -62,6 +56,7 @@ h2 {
   color: #fff;
   padding: 0.8em 1.5em;
   border-radius: 45px;
+  width: 300px;
   border: hidden;
   font-size: 19px;
   box-shadow: 0 5px 5px #C5C5C5;
@@ -72,16 +67,25 @@ h2 {
   box-shadow: 0 12px 10px #C5C5C5;
 }
 
-.running__card {
+section.menu {
+  margin: 0;
+  padding: 0;
+}
+section.menu .menu__title {
+  padding: 1em;
+  padding-bottom: 0;
+}
+section.menu .running__card {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.running__card .etape {
+section.menu .running__card .etape {
   position: relative;
-  margin: 1em;
+  margin: 1em 2%;
+  width: 300px;
 }
-.running__card .btn__nbr {
+section.menu .running__card .btn__nbr {
   background-color: #9356DC;
   border-radius: 100%;
   padding: 2px 7px;
@@ -91,33 +95,33 @@ h2 {
   top: 1.6em;
   left: -10px;
 }
-.running__card .menu__button {
+section.menu .running__card .menu__button {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
-  padding: 1.3em 2em;
+  padding: 1.3em;
   background-color: #F6F6F6;
   border: none;
   border-radius: 20px;
   box-shadow: 0 5px 5px #EAEAEA;
-  width: 350px;
   font-size: 19px;
 }
-.running__card .menu__button .fas {
+section.menu .running__card .menu__button .fas {
   color: #7E7E7E;
 }
-.running__card .menu__button .invis .fas {
+section.menu .running__card .menu__button .invis .fas {
   color: #F6F6F6;
 }
-.running__card .menu__button:hover {
+section.menu .running__card .menu__button:hover {
   box-shadow: 0 12px 10px #EAEAEA;
   background-color: #f2eafb;
 }
-.running__card .menu__button:hover .fas {
+section.menu .running__card .menu__button:hover .fas {
   color: #9356DC;
 }
-.running__card .menu__button:hover .invis .fas {
+section.menu .running__card .menu__button:hover .invis .fas {
   color: #f2eafb;
 }
 
@@ -158,7 +162,7 @@ h2 {
 
 .menu__pages nav {
   display: flex;
-  padding: 2vh 2em 2vh 2em;
+  padding: 2vh 1em;
   justify-content: space-between;
 }
 .menu__pages nav a {
@@ -169,7 +173,8 @@ h2 {
   padding: 0 17vw;
 }
 .menu__pages .invis__menu {
-  color: #fff;
+  color: #FFF;
+  font-size: 3vmax;
 }
 .menu__pages .rest__pic {
   width: 100%;
@@ -184,7 +189,7 @@ footer {
 }
 footer .logo {
   margin-bottom: 2vh;
-  font-size: 2.5vh;
+  font-size: 1.5em;
 }
 footer a {
   text-decoration: none;
@@ -198,14 +203,12 @@ footer .fa-hands-helping {
 }
 
 .menu {
+  margin: 0 1em;
   padding: 1em;
   padding-bottom: 3em;
 }
-.menu div {
-  margin: 1em;
-}
-
 .restaurants {
+  margin-top: 2em;
   padding: 1em;
   background-color: #F6F6F6;
 }
@@ -242,6 +245,13 @@ footer .fa-hands-helping {
 .restaurants .card:hover {
   box-shadow: 0 12px 10px #E5E5E5;
 }
+.menu__body {
+  background-color: #F6F6F6;
+}
+.menu__body header {
+  background-color: white;
+}
+
 .page__section {
   position: relative;
   top: -50px;
@@ -253,6 +263,10 @@ footer .fa-hands-helping {
   display: flex;
   justify-content: space-between;
   padding-right: 1em;
+  padding-bottom: 1em;
+}
+.page__section .title p {
+  margin: auto 0;
 }
 .page__section h2::before {
   content: "";
@@ -266,7 +280,7 @@ footer .fa-hands-helping {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
 }
 .page__section .menus__menu {
   width: 350px;
@@ -281,6 +295,7 @@ footer .fa-hands-helping {
   grid-template-areas: "title ." "description price";
   grid-template-columns: auto auto;
   grid-gap: 5px;
+  box-shadow: 0 5px 5px #E8E8E8;
 }
 .page__section .menus__menu .menu__card .menu__card--title {
   grid-area: title;
@@ -299,6 +314,7 @@ footer .fa-hands-helping {
 .page__section .menus__menu .menu__card .menu__card--price {
   grid-area: price;
   justify-self: end;
+  font-weight: 600;
 }
 .page__section .order__btn {
   text-align: center;
