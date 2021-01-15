@@ -14,12 +14,6 @@
   top: 1.5em;
 }
 
-@media (min-width: 1025px) {
-  body {
-    margin: 0 100px;
-  }
-}
-
 body {
   font-family: "Roboto", "sans-serif";
 }
@@ -94,12 +88,6 @@ h2 {
   z-index: 2;
   width: 0%;
   height: 0%;
-  animation: blur-fade 1870.13ms linear 3629.87ms 1 normal backwards;
-}
-@media (min-width: 1025px) {
-  .loading-blur {
-    transform: translate(-100px, 0);
-  }
 }
 .loading-blur .loading-spinner {
   position: fixed;
@@ -116,7 +104,6 @@ h2 {
   margin: 0 5px;
   height: 100%;
   transform: scaleY(0);
-  animation: loading-spinner 2s ease-in-out 2 alternate backwards;
 }
 .loading-blur .loading-spinner .load-bar:nth-child(1) {
   animation-delay: 250ms;
@@ -174,6 +161,40 @@ h2 {
     background: rgba 0, 0, 0, 0;
   }
 }
+.menu__card--checkout {
+  background-color: #99E2D0;
+  color: #FFF;
+  justify-self: end;
+  align-self: stretch;
+  height: 100%;
+  grid-area: 1/3/3/4;
+  width: 0;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.menu__card--checkout .fas {
+  margin: auto;
+  font-size: 1.5em;
+}
+
+@keyframes checkout {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75px;
+  }
+}
+@keyframes checkout-rotation {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
 .header__logo {
   text-align: center;
   padding: 3vh 25vw;
@@ -189,7 +210,7 @@ h2 {
 }
 @media (min-width: 1025px) {
   .nav {
-    padding: 2em;
+    padding: 2em 15%;
     display: flex;
     flex-wrap: wrap;
   }
@@ -230,6 +251,11 @@ h2 {
   display: flex;
   padding: 2vh 1em;
   justify-content: space-between;
+}
+@media (min-width: 1025px) {
+  .menu__pages nav {
+    padding: 1em 10%;
+  }
 }
 .menu__pages nav a {
   margin: auto 0;
@@ -279,10 +305,20 @@ footer .fa-hands-helping {
     padding-bottom: 1em;
   }
 }
+@media (min-width: 1025px) {
+  footer {
+    padding: 1em 10%;
+  }
+}
 
 section.menu {
   padding: 1em;
   padding-bottom: 3em;
+}
+@media (min-width: 1025px) {
+  section.menu {
+    padding: 1em 10%;
+  }
 }
 section.menu .running__card {
   display: flex;
@@ -354,6 +390,11 @@ section.menu .running__card .menu__button:hover .invis .fas {
   padding: 1em;
   background-color: #F6F6F6;
 }
+@media (min-width: 1025px) {
+  .restaurants {
+    padding: 1em 10%;
+  }
+}
 .restaurants .restaurants__cards {
   display: flex;
   flex-wrap: wrap;
@@ -404,6 +445,11 @@ section.menu .running__card .menu__button:hover .invis .fas {
   background-color: #F6F6F6;
   padding: 1em;
 }
+@media (min-width: 1025px) {
+  .page__section {
+    padding: 1em 10%;
+  }
+}
 .page__section .title {
   display: flex;
   justify-content: space-between;
@@ -439,15 +485,23 @@ section.menu .running__card .menu__button:hover .invis .fas {
 .page__section .menus__menu .menu__card {
   background-color: white;
   margin: 1em 0;
-  padding: 1em 0.8em;
   border-radius: 20px;
   display: grid;
   grid-template-areas: "title ." "description price";
-  grid-template-columns: auto auto;
+  grid-template-columns: auto min-content min-content;
   grid-gap: 5px;
+  overflow: hidden;
   box-shadow: 0 5px 5px #E8E8E8;
 }
+.page__section .menus__menu .menu__card:hover > .menu__card--checkout {
+  animation: checkout 1s forwards;
+}
+.page__section .menus__menu .menu__card:hover > .menu__card--checkout .fas {
+  animation: checkout-rotation 1s;
+}
 .page__section .menus__menu .menu__card .menu__card--title {
+  padding-top: 0.8em;
+  padding-left: 0.8em;
   grid-area: title;
   font-weight: 600;
   overflow: hidden;
@@ -455,6 +509,8 @@ section.menu .running__card .menu__button:hover .invis .fas {
   white-space: nowrap;
 }
 .page__section .menus__menu .menu__card .menu__card--description {
+  padding-bottom: 0.8em;
+  padding-left: 0.8em;
   grid-area: description;
   font-weight: 200;
   overflow: hidden;
@@ -462,6 +518,8 @@ section.menu .running__card .menu__button:hover .invis .fas {
   white-space: nowrap;
 }
 .page__section .menus__menu .menu__card .menu__card--price {
+  padding-bottom: 0.8em;
+  padding-right: 1.5em;
   grid-area: price;
   justify-self: end;
   font-weight: 600;

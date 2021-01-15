@@ -3,6 +3,7 @@
     padding: 3vh 25vw;
     @include box-shadow(#d2d2d2);    
     position: relative; /** pour faire apparaitre l'ombre **/
+   
 }
 
 .nav{
@@ -10,7 +11,7 @@
     padding: 3rem ;
     background-color: $bckgrd-clr-gray;
     @include desktop{
-        padding: 2em;
+        padding: 2em 15%;
         display: flex;
         flex-wrap: wrap;
         h1{
@@ -54,6 +55,9 @@
 
 .menu__pages{
     nav{
+        @include desktop{
+            padding: 1em 10%;
+        }
         display: flex;
         padding: 2vh 1em;        
         justify-content: space-between;
@@ -76,7 +80,5 @@
         @include desktop{
             height: 320px;
         }
-
-
     }
 }

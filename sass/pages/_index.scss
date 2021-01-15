@@ -2,6 +2,9 @@
 section.menu{
     padding: 1em;
     padding-bottom: 3em;
+    @include desktop{
+        padding: 1em 10%;
+    }
     .menu__title{
         @extend %title-font-size;
     }
@@ -69,6 +72,9 @@ section.menu{
     margin-top: 2em;
     padding: 1em;
     background-color: $bckgrd-clr-gray;
+    @include desktop{
+        padding: 1em 10%;
+    }
     &__title{
         @extend %title-font-size;
     }

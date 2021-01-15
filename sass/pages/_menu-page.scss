@@ -6,6 +6,9 @@
 }
 
 .page__section{
+    @include desktop{
+        padding: 1em 10%;
+    }
     position: relative;
     top: -50px;
     border-radius: 25px 25px 0 0;
@@ -44,21 +47,32 @@
             .menu__card{
                 background-color: white;
                 margin: 1em 0;
-                padding: 1em 0.8em;
                 border-radius: 20px;
                 display: grid;
                 grid-template-areas: "title ." "description price";
-                grid-template-columns: auto auto;
+                grid-template-columns: auto min-content min-content;
                 grid-gap: 5px;
+                overflow:hidden;
                 @include box-shadow(#E8E8E8);
+                &:hover > .menu__card--checkout{
+                    animation: checkout 1s forwards;
+                }
+                &:hover > .menu__card--checkout .fas{
+                    animation: checkout-rotation 1s;    
+                }
                 .menu__card--title{
+                    padding-top: 0.8em;
+                    padding-left: 0.8em;
                     grid-area: title;
                     font-weight:600;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
+                    
                 }
                 .menu__card--description{
+                    padding-bottom: 0.8em;
+                    padding-left: 0.8em;
                     grid-area: description;
                     font-weight: 200;
                     overflow: hidden;
@@ -66,6 +80,8 @@
                     white-space: nowrap;
                 }
                 .menu__card--price{
+                    padding-bottom: 0.8em;
+                    padding-right: 1.5em;
                     grid-area: price;
                     justify-self: end;
                     font-weight: 600;

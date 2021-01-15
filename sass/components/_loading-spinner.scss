@@ -3,10 +3,7 @@
     z-index: 2; 
     width: 0%;
     height: 0%;
-    animation: blur-fade 1870.13ms linear 3629.87ms 1 normal backwards;
-    @include desktop{
-        transform: translate( -100px ,0);
-    }
+    // animation: blur-fade 1870.13ms linear 3629.87ms 1 normal backwards;
     
     .loading-spinner{
     position: fixed;
@@ -25,7 +22,7 @@
         margin: 0 5px;
         height: 100%;
         transform: scaleY(0);
-        animation: loading-spinner 2s ease-in-out 2 alternate backwards;
+        // animation: loading-spinner 2s ease-in-out 2 alternate backwards;
         @for $i from 1 through 6{
              &:nth-child(#{$i}){
                  animation-delay: 250ms * $i;
@@ -41,7 +38,6 @@
             background-color: $color-tertiary;
         }
      }
-        
     }
 }
 

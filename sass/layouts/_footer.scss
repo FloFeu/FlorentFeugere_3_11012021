@@ -24,5 +24,8 @@ footer{
             padding-bottom: 1em;
         }
     }
+    @include desktop{
+        padding: 1em 10%;
+    }
 }
 
