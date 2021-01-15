@@ -18,9 +18,8 @@
         padding-bottom: 1em;        
         h1{
             @extend %restaurant-name;
-        }
-        p{
             margin: auto 0;
+
         }
     }
     h2::before{

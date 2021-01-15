@@ -49,9 +49,6 @@ section.menu{
             .fas{
                 color: #7E7E7E;
             }
-            .btn__txt{
-                // 
-            }
             .invis .fas{
                 color: $bckgrd-clr-gray;
             }
@@ -103,6 +100,9 @@ section.menu{
             justify-content: space-between;
             align-content: center;
             padding: 1em;
+        }
+        &__txt{
+            margin: auto 0;
         }
         .card__heart{
             margin: auto 0;

@@ -14,8 +14,27 @@
 }
 
 
-
-.fa-heart{
-    font-size: 1.8em;
-    margin: auto 0;
+.fa-stack{
+    .far{
+        padding: 0;
+        opacity: 1;
+        transition: opacity 300ms ease-in-out;
+    }
+    .fas{
+        padding: 0;
+        opacity: 0;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient($color-primary, $color-secondary);
+        transition: opacity 300ms 15ms ease-in-out ;
+        
+    }
+    &:hover{
+        .far{
+            opacity:0;
+        }
+        .fas{
+            opacity: 1;
+        }
+    }
 }

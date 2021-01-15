@@ -69,11 +69,105 @@ h2 {
   box-shadow: 0 12px 10px #C5C5C5;
 }
 
-.fa-heart {
-  font-size: 1.8em;
-  margin: auto 0;
+.fa-stack .far {
+  padding: 0;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+.fa-stack .fas {
+  padding: 0;
+  opacity: 0;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  transition: opacity 300ms 15ms ease-in-out;
+}
+.fa-stack:hover .far {
+  opacity: 0;
+}
+.fa-stack:hover .fas {
+  opacity: 1;
 }
 
+.loading-blur {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  animation: blur-fade 2s 3s linear backwards;
+}
+@media (min-width: 1025px) {
+  .loading-blur {
+    transform: translate(-100px, 0);
+  }
+}
+.loading-blur .loading-spinner {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  width: 24vh;
+  height: 21vh;
+  display: flex;
+  transform: translate(-50%, -50%);
+}
+.loading-blur .loading-spinner .load-bar {
+  width: 3vh;
+  margin: 0 5px;
+  height: 100%;
+  transform: scaleY(0);
+  animation: loading-spinner 2s 3s ease-in-out 2 alternate backwards;
+}
+.loading-blur .loading-spinner .load-bar:nth-child(1) {
+  animation-delay: 250ms;
+}
+.loading-blur .loading-spinner .load-bar:nth-child(2) {
+  animation-delay: 500ms;
+}
+.loading-blur .loading-spinner .load-bar:nth-child(3) {
+  animation-delay: 750ms;
+}
+.loading-blur .loading-spinner .load-bar:nth-child(4) {
+  animation-delay: 1000ms;
+}
+.loading-blur .loading-spinner .load-bar:nth-child(5) {
+  animation-delay: 1250ms;
+}
+.loading-blur .loading-spinner .load-bar:nth-child(6) {
+  animation-delay: 1500ms;
+}
+.loading-blur .loading-spinner .load-bar:nth-child(1), .loading-blur .loading-spinner .load-bar:nth-child(4) {
+  background-color: #9356DC;
+}
+.loading-blur .loading-spinner .load-bar:nth-child(2), .loading-blur .loading-spinner .load-bar:nth-child(5) {
+  background-color: #FF79DA;
+}
+.loading-blur .loading-spinner .load-bar:nth-child(3), .loading-blur .loading-spinner .load-bar:nth-child(6) {
+  background-color: #99E2D0;
+}
+
+@keyframes loading-spinner {
+  0% {
+    transform: scaleY(0);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0.1);
+  }
+}
+@keyframes blur-fade {
+  0% {
+    background-color: black;
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    background: rgba 0, 0, 0, 0;
+  }
+}
 .header__logo {
   text-align: center;
   padding: 3vh 25vw;
@@ -282,6 +376,9 @@ section.menu .running__card .menu__button:hover .invis .fas {
   align-content: center;
   padding: 1em;
 }
+.restaurants .card__txt {
+  margin: auto 0;
+}
 .restaurants .card .card__heart {
   margin: auto 0;
 }
@@ -308,7 +405,7 @@ section.menu .running__card .menu__button:hover .invis .fas {
   padding-right: 1em;
   padding-bottom: 1em;
 }
-.page__section .title p {
+.page__section .title h1 {
   margin: auto 0;
 }
 .page__section h2::before {
