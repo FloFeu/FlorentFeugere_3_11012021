@@ -88,6 +88,7 @@ h2 {
   z-index: 2;
   width: 0%;
   height: 0%;
+  animation: blur-fade 1870.13ms linear 3629.87ms 1 normal backwards;
 }
 .loading-blur .loading-spinner {
   position: fixed;
@@ -104,6 +105,7 @@ h2 {
   margin: 0 5px;
   height: 100%;
   transform: scaleY(0);
+  animation: loading-spinner 2s ease-in-out 2 alternate backwards;
 }
 .loading-blur .loading-spinner .load-bar:nth-child(1) {
   animation-delay: 250ms;
