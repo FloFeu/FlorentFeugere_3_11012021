@@ -22,10 +22,10 @@
 }
 
 .restaurants__cards .card{
-    animation: apparition 2s ease-out forwards;
+    animation: apparition 1s  ease-out forwards;
     @for $i from 1 through 4{
         &:nth-child(#{$i}){
-        animation-delay: 500ms * $i;
+        animation-delay: 3550ms +(350ms * $i);
         }
     }
 }
