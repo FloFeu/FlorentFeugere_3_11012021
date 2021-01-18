@@ -162,8 +162,7 @@ h2 {
 .menu__card--checkout .fas {
   margin: auto;
   font-size: 1.5em;
-  .
-        transform: rotate(0);
+  transform: rotate(0);
   transition: transform 650ms 100ms;
 }
 
