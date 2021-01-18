@@ -45,6 +45,7 @@
                 width: 30%;
             }
             .menu__card{
+                opacity: 0;
                 background-color: white;
                 margin: 1em 0;
                 border-radius: 20px;
@@ -54,12 +55,7 @@
                 grid-gap: 5px;
                 overflow:hidden;
                 @include box-shadow(#E8E8E8);
-                &:hover > .menu__card--checkout{
-                    animation: checkout 1s forwards;
-                }
-                &:hover > .menu__card--checkout .fas{
-                    animation: checkout-rotation 1s;    
-                }
+                
                 .menu__card--title{
                     padding-top: 0.8em;
                     padding-left: 0.8em;
@@ -68,7 +64,6 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
-                    
                 }
                 .menu__card--description{
                     padding-bottom: 0.8em;
@@ -86,6 +81,7 @@
                     justify-self: end;
                     font-weight: 600;
                 }
+
             }
         }
     }

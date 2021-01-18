@@ -1,3 +1,4 @@
+
 .menu__card--checkout{
     background-color: $color-tertiary;
     color: #FFF;
@@ -9,29 +10,22 @@
     border-radius: 0 20px 20px 0;
     display: flex;
     justify-content: center;  
-    align-content: center;  
-  
+    align-content: center;
+    transition: width 650ms 100ms;  
+    
     .fas{
         margin: auto;
-        font-size: 1.5em; 
-           
+        font-size: 1.5em;.
+        transform: rotate(0);
+        transition: transform 650ms 100ms ;
     }
 }
 
-@keyframes checkout{
-    from{
-        width: 0;
-    }
-    to{
+.menu__card{
+    &:hover > .menu__card--checkout{
         width: 75px;
     }
-}
-
-@keyframes checkout-rotation{
-    from{
-        transform: rotate(45deg)
-    }
-    to{
-        transform: rotate(-360deg)
+    &:hover >.menu__card--checkout .fas{
+        transform: rotate(-1turn);
     }
 }
