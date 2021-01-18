@@ -1,4 +1,3 @@
-@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 .restaurants .notif {
@@ -15,6 +14,14 @@
 }
 
 body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+body {
   font-family: "Roboto", "sans-serif";
 }
 
@@ -22,18 +29,9 @@ body {
   font-family: "shrikhand", "sans-serif";
 }
 
-.restaurants__title, section.menu .menu__title, .nav h1 {
-  font-size: 1.8rem;
-  font-weight: 900;
-}
-
 a {
   text-decoration: none;
   color: black;
-}
-
-h3 {
-  font-weight: 600;
 }
 
 .page__section .title h1 {
@@ -41,28 +39,36 @@ h3 {
   font-size: 1.8rem;
 }
 
-h2 {
+h4 {
   font-weight: 100;
   color: black;
   position: relative;
-  padding-bottom: 0.5em;
 }
 
 .nav__btn {
   color: #fff;
   padding: 0.8em 2em;
   border-radius: 45px;
-  max-width: 350px;
   border: hidden;
   font-size: 19px;
+  width: 90%;
+  max-width: 400px;
   box-shadow: 0 5px 5px #C5C5C5;
   background-image: linear-gradient(#FF79DA, #9356DC);
+}
+@media (min-width: 641px) {
+  .nav__btn {
+    max-width: 500px;
+  }
 }
 .nav__btn:hover {
   background-image: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 0 12px 10px #C5C5C5;
 }
 
+.fa-stack {
+  margin: auto 0;
+}
 .fa-stack .far {
   padding: 0;
   opacity: 1;
@@ -83,86 +89,6 @@ h2 {
   opacity: 1;
 }
 
-.loading-blur {
-  position: fixed;
-  z-index: 2;
-  width: 0%;
-  height: 0%;
-  animation: blur-fade 1870.13ms linear 3629.87ms 1 normal backwards;
-}
-.loading-blur .loading-spinner {
-  position: fixed;
-  z-index: 1000;
-  top: 50%;
-  left: 50%;
-  width: 24vh;
-  height: 21vh;
-  display: flex;
-  transform: translate(-50%, -50%);
-}
-.loading-blur .loading-spinner .load-bar {
-  width: 3vh;
-  margin: 0 5px;
-  height: 100%;
-  transform: scaleY(0);
-  animation: loading-spinner 2s ease-in-out 2 alternate backwards;
-}
-.loading-blur .loading-spinner .load-bar:nth-child(1) {
-  animation-delay: 250ms;
-}
-.loading-blur .loading-spinner .load-bar:nth-child(2) {
-  animation-delay: 500ms;
-}
-.loading-blur .loading-spinner .load-bar:nth-child(3) {
-  animation-delay: 750ms;
-}
-.loading-blur .loading-spinner .load-bar:nth-child(4) {
-  animation-delay: 1000ms;
-}
-.loading-blur .loading-spinner .load-bar:nth-child(5) {
-  animation-delay: 1250ms;
-}
-.loading-blur .loading-spinner .load-bar:nth-child(6) {
-  animation-delay: 1500ms;
-}
-.loading-blur .loading-spinner .load-bar:nth-child(1), .loading-blur .loading-spinner .load-bar:nth-child(4) {
-  background-color: #9356DC;
-}
-.loading-blur .loading-spinner .load-bar:nth-child(2), .loading-blur .loading-spinner .load-bar:nth-child(5) {
-  background-color: #FF79DA;
-}
-.loading-blur .loading-spinner .load-bar:nth-child(3), .loading-blur .loading-spinner .load-bar:nth-child(6) {
-  background-color: #99E2D0;
-}
-
-@keyframes loading-spinner {
-  0% {
-    transform: scaleY(0);
-  }
-  50% {
-    transform: scaleY(1);
-  }
-  100% {
-    transform: scaleY(0.1);
-  }
-}
-@keyframes blur-fade {
-  0% {
-    height: 100%;
-    width: 100%;
-    background-color: black;
-  }
-  50% {
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  100% {
-    height: 100%;
-    width: 100%;
-    background: rgba 0, 0, 0, 0;
-  }
-}
 @keyframes apparition {
   0% {
     transform: translate(0, 25%);
@@ -209,9 +135,6 @@ h2 {
   animation-delay: 2500ms;
 }
 
-.restaurants__cards .card {
-  animation: apparition 1s ease-out forwards;
-}
 .restaurants__cards .card:nth-child(1) {
   animation-delay: 3900ms;
 }
@@ -253,56 +176,61 @@ h2 {
   transform: rotate(-1turn);
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+}
+
 .header__logo {
   text-align: center;
-  padding: 3vh 25vw;
+  padding: 1em 0;
   box-shadow: 0 5px 5px #d2d2d2;
   position: relative;
   /** pour faire apparaitre l'ombre **/
 }
+.header__logo img {
+  width: 75%;
+  max-width: 350px;
+}
 
 .nav {
   text-align: center;
-  padding: 3rem;
   background-color: #F6F6F6;
+  padding: 1% 2.5% 3% 2.5%;
 }
 @media (min-width: 1025px) {
   .nav {
-    padding: 2em 15%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   .nav h1 {
     width: 100%;
-    margin: 0 auto;
-    padding-bottom: 1em;
   }
   .nav p {
     width: 50%;
-    margin: auto;
-    padding: 0;
   }
   .nav .nav__btn {
-    margin: auto;
-    width: 35%;
-    padding: 1em;
+    margin: 0 5%;
+    width: 40%;
   }
 }
 .nav p {
   color: #717171;
-  padding: 1em 2em;
+  align-self: center;
+  margin-bottom: 1em;
 }
 
 .loc {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
   background-color: #EAEAEA;
-  padding: 2vh 0;
   font-weight: 600;
   color: #353535;
 }
-.loc .fas {
-  position: relative;
-  right: 3vw;
+.loc p {
+  padding-left: 2em;
 }
 
 .menu__pages nav {
@@ -338,9 +266,9 @@ h2 {
 }
 
 footer {
+  padding: 1em 5%;
   background-color: #353535;
   color: #fff;
-  padding: 1em;
 }
 footer .logo {
   margin-bottom: 2vh;
@@ -363,40 +291,43 @@ footer .fa-hands-helping {
     padding-bottom: 1em;
   }
 }
-@media (min-width: 1025px) {
-  footer {
-    padding: 1em 10%;
-  }
-}
 
 section.menu {
-  padding: 1em;
-  padding-bottom: 3em;
-}
-@media (min-width: 1025px) {
-  section.menu {
-    padding: 1em 10%;
-  }
+  margin: 2em 5%;
 }
 section.menu .running__card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+}
+@media (min-width: 641px) {
+  section.menu .running__card {
+    justify-content: center;
+  }
 }
 @media (min-width: 1025px) {
   section.menu .running__card {
-    justify-content: space-evenly;
-    padding: 0 5%;
+    justify-content: space-between;
   }
 }
 section.menu .running__card .etape {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
   position: relative;
-  margin: 1em 2%;
-  width: 300px;
+  width: 100%;
+  margin-bottom: 1em;
 }
 @media (min-width: 641px) {
   section.menu .running__card .etape {
-    width: 350px;
+    width: 80%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
+@media (min-width: 1025px) {
+  section.menu .running__card .etape {
+    width: 32%;
   }
 }
 section.menu .running__card .btn__nbr {
@@ -409,7 +340,7 @@ section.menu .running__card .btn__nbr {
   left: -10px;
 }
 section.menu .running__card .menu__button {
-  width: 300px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -420,11 +351,6 @@ section.menu .running__card .menu__button {
   border-radius: 20px;
   box-shadow: 0 5px 5px #EAEAEA;
   font-size: 19px;
-}
-@media (min-width: 641px) {
-  section.menu .running__card .menu__button {
-    width: 350px;
-  }
 }
 section.menu .running__card .menu__button .fas {
   color: #7E7E7E;
@@ -444,30 +370,33 @@ section.menu .running__card .menu__button:hover .invis .fas {
 }
 
 .restaurants {
-  margin-top: 2em;
-  padding: 1em;
+  padding: 2em 5%;
   background-color: #F6F6F6;
-}
-@media (min-width: 1025px) {
-  .restaurants {
-    padding: 1em 10%;
-  }
 }
 .restaurants .restaurants__cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .restaurants .card {
-  opacity: 0;
+  width: 100%;
+  margin: 0.5em 0;
   display: flex;
   flex-direction: column;
-  margin: 1em;
   background-color: #FFFFFF;
   border-radius: 25px;
   position: relative;
   box-shadow: 0 5px 5px #E5E5E5;
-  width: 300px;
+}
+@media (min-width: 641px) {
+  .restaurants .card {
+    width: 49%;
+  }
+}
+@media (min-width: 1025px) {
+  .restaurants .card {
+    width: 24%;
+  }
 }
 .restaurants .card__img {
   border-radius: 25px 25px 0 0px;
@@ -479,13 +408,9 @@ section.menu .running__card .menu__button:hover .invis .fas {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  padding: 1em;
 }
 .restaurants .card__txt {
-  margin: auto 0;
-}
-.restaurants .card .card__heart {
-  margin: auto 0;
+  margin: 0 0 1em 1em;
 }
 .restaurants .card:hover {
   box-shadow: 0 12px 10px #E5E5E5;
@@ -518,13 +443,13 @@ section.menu .running__card .menu__button:hover .invis .fas {
 .page__section .title h1 {
   margin: auto 0;
 }
-.page__section h2::before {
+.page__section h4::before {
   content: "";
   position: absolute;
   background-color: #99E2D0;
   width: 35px;
   height: 3px;
-  bottom: 3px;
+  bottom: -4px;
 }
 .page__section .menus {
   display: flex;

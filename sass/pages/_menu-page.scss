@@ -25,13 +25,13 @@
 
         }
     }
-    h2::before{
+    h4::before{
         content: "";
         position: absolute;
         background-color: $color-tertiary;
         width: 35px;
         height: 3px;
-        bottom: 3px;
+        bottom: -4px;
     }
     .menus{
         display: flex;

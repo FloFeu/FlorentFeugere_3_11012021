@@ -1,56 +1,60 @@
+header{
+    display: flex;
+    flex-direction: column;
+}
+
 .header__logo{
+    
     text-align: center;
-    padding: 3vh 25vw;
+    padding: 1em 0;
     @include box-shadow(#d2d2d2);    
     position: relative; /** pour faire apparaitre l'ombre **/
-   
+    img{
+        width: 75%;
+        max-width: 350px;
+    }
 }
 
 .nav{
     text-align: center;
-    padding: 3rem ;
     background-color: $bckgrd-clr-gray;
+    padding: 1% 2.5% 3% 2.5%;
     @include desktop{
-        padding: 2em 15%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         h1{
             width: 100%;
-            margin: 0 auto;
-            padding-bottom: 1em;
         }
         p{
             width: 50%;
-            margin: auto;
-            padding: 0;
         }
         .nav__btn{
-            margin: auto;
-            width: 35%;
-            padding: 1em;
+            margin: 0 5%;
+            width: 40%;
         }
-    }
-
-    h1{
-        @extend %title-font-size;
     }
     p{
         color: #717171;
-        padding: 1em 2em;
+        align-self: center;
+        margin-bottom: 1em;
     }
     
 }
 
 .loc{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 1em;        
     background-color: $bckgrd-clr-dgray;
-    padding: 2vh 0;
     font-weight: 600;
     color: #353535;
-    .fas{
-        position: relative;
-        right: 3vw;
+   
+    p{
+        padding-left: 2em;
     }
+
+   
 }
 
 .menu__pages{
