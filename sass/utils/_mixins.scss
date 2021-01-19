@@ -1,0 +1,19 @@
+@mixin box-shadow($color){
+    box-shadow: 0 5px 5px $color;
+}
+
+@mixin box-shadow-hover($color){
+    box-shadow: 0 12px 10px $color;
+}
+
+@mixin tablet{
+    @media (min-width: $tablet-width){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: $desktop-width){
+        @content;
+    }
+}

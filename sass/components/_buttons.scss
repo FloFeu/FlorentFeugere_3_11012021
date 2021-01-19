@@ -1,0 +1,48 @@
+// ** BOUTONS EXPLORER ET COMMANDER **//
+
+.nav__btn{
+    color: #fff;
+    padding: 0.8em 2em;
+    border-radius: 45px;
+    border: hidden;
+    font-size: 18px;
+    width: 75%;
+    max-width: 450px;
+    cursor: pointer;
+    @include tablet{
+        max-width: 500px;
+    }
+    @include box-shadow(#C5C5C5);
+    background-image: linear-gradient($color-secondary, $color-primary);   
+    &:hover{
+        background-image: linear-gradient($lighten-color-secondary, $lighten-color-primary);
+        @include box-shadow-hover(#C5C5C5);
+    }
+}
+
+// ** COEUR EN DEGRADE ** //
+
+.fa-stack{
+    margin: auto 0;
+    .far{
+        padding: 0;
+        opacity: 1;
+        transition: opacity 300ms ease-in-out;
+    }
+    .fas{
+        padding: 0;
+        opacity: 0;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient($color-primary, $color-secondary);
+        transition: opacity 300ms 15ms ease-in-out ;
+    }
+    &:hover{
+        .far{
+            opacity:0;
+        }
+        .fas{
+            opacity: 1;
+        }
+    }
+}

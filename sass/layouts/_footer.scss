@@ -1,0 +1,28 @@
+footer{
+    padding: 1em 5%;
+    background-color: #353535;
+    color: #fff;
+    .logo{
+        margin-bottom: 2vh;
+        font-size: 1.5em;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .fa-utensils{
+        padding-right: 16px;
+    }
+    .fa-hands-helping{
+        padding-right: 8px;
+    }
+    
+    @include tablet{
+        ul{
+            display:flex;
+            justify-content: space-between;
+            padding-bottom: 1em;
+        }
+    }
+}
+

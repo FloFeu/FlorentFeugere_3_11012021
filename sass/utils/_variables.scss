@@ -1,0 +1,15 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+$lighten-color-primary : lighten($color-primary, 5%);
+$lighten-color-secondary: lighten($color-secondary, 5%);
+$lighten-color-tertiary: lighten($color-tertiary, 5%);
+
+$bckgrd-clr-gray: #F6F6F6;
+$bckgrd-clr-dgray: #EAEAEA;
+
+$tablet-width: 641px;
+$desktop-width: 1025px;
+
+$size: 3vh;

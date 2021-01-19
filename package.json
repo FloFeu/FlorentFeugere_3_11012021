@@ -1,0 +1,28 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "sass-dev": "sass --watch ./sass/main.scss:./css/style.css",
+    "sass-prod": "sass --watch ./sass/main.scss:./css/style.css --style compressed",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/style/styleprefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FloFeu/FlorentFeugere_3_11012021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/FloFeu/FlorentFeugere_3_11012021/issues"
+  },
+  "homepage": "https://github.com/FloFeu/FlorentFeugere_3_11012021#readme",
+  "dependencies": {
+    "minireset.css": "0.0.6"
+  }
+}

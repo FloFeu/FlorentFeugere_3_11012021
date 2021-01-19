@@ -1,0 +1,31 @@
+@keyframes apparition{
+    0%{
+        transform: translate(0, 25%);
+        
+    }
+    40%{
+        transform: translate(0, -10px);
+    }
+    100%{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+.menu__card{
+    animation: apparition 1500ms  forwards;
+    @for $i from 1 through 10{
+        &:nth-child(#{$i}){
+         animation-delay: 250ms * $i;
+        }  
+     }
+}
+
+.restaurants__cards .card{
+    animation: apparition 1s  ease-out forwards;
+    @for $i from 1 through 4{
+        &:nth-child(#{$i}){
+        animation-delay: 3550ms +(350ms * $i);
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.loading-blur{
+    position: fixed;
+    z-index: 2; 
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    animation: blur-fade 1870.13ms linear 3629.87ms 1 normal backwards;
+    .loading-spinner{
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    width: $size*8;
+    height: $size*7;
+    display: flex;
+    transform: translate( -50%, -50%);
+    
+    
+
+    .load-bar{
+        width: $size;
+        margin: 0 5px;
+        height: 100%;
+        transform: scaleY(0);
+        animation: loading-spinner 2s ease-in-out 2 alternate backwards;
+        @for $i from 1 through 6{
+             &:nth-child(#{$i}){
+                 animation-delay: 250ms * $i;
+            }
+        }
+        &:nth-child(1), &:nth-child(4){
+         background-color: $color-primary;
+         }
+        &:nth-child(2), &:nth-child(5){
+             background-color: $color-secondary;
+         }
+        &:nth-child(3), &:nth-child(6){
+            background-color: $color-tertiary;
+        }
+     }
+    }
+}
+
+@keyframes loading-spinner{
+    0%{
+        transform: scaleY(0);
+    }
+    50%{
+        transform: scaleY(1)
+    }
+    100%{
+        transform: scaleY(0.1);
+    }
+    
+}
+
+@keyframes blur-fade{
+    0%{
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: 1;
+    }
+    100%{
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: 0;
+        
+    }
+}

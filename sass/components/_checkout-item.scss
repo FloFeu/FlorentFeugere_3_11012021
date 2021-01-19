@@ -1,0 +1,31 @@
+
+.menu__card--checkout{
+    background-color: $color-tertiary;
+    color: #FFF;
+    justify-self: end;
+    align-self: stretch;
+    height: 100%;
+    grid-area: 1 / 3 / 3 / 4;
+    width: 0;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: center;  
+    align-content: center;
+    transition: width 650ms 100ms;  
+    
+    .fas{
+        margin: auto;
+        font-size: 1.5em;
+        transform: rotate(0);
+        transition: transform 650ms 100ms ;
+    }
+}
+
+.menu__card{
+    &:hover > .menu__card--checkout{
+        width: 75px;
+    }
+    &:hover >.menu__card--checkout .fas{
+        transform: rotate(-1turn);
+    }
+}

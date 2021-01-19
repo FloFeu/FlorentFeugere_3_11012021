@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    font-family: 'Roboto', 'sans-serif';      
+}
+
+.logo{
+    font-family: 'shrikhand', 'sans-serif';
+}
+
+
+%title-font-size{
+    font-weight: 900;
+}
+
+%restaurant-name{
+    font-family: 'Shrikhand';
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1{
+    font-size: 26px;
+}
+
+
+h4{
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    position: relative;
+}
+
+
+//** Police des choix de plats **//
+
+.menu__card--title{
+    font-size: 20px;
+}
+
+.menu__card--description{
+    color: lighten(black, 50%);
+    font-size: 18px;
+}
+
+.menu__card--price{
+    font-weight: 900;
+    color: lighten(black, 25%);
+}

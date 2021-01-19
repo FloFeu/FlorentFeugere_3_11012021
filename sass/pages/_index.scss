@@ -1,0 +1,119 @@
+
+section.menu{
+    margin: 2em 5%;
+    .running__card{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include tablet{
+            justify-content: center;
+        }
+        @include desktop{
+            justify-content: space-between;
+        }
+        .etape{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            position: relative;
+            width: 100%;
+            margin-bottom: 1em;
+            @include tablet{
+                width: 80%;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+            @include desktop{
+                width: 32%;
+            
+            }
+            
+            
+        }
+        .btn__nbr{
+            background-color: $color-primary;
+            border-radius: 100%;
+            padding: 2px 7px;
+            position: absolute;
+            color: #FFF;
+            top: 1.6em;
+            left: -10px;
+        }
+        .menu__button{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: center;
+            padding: 1.3em;
+            background-color: $bckgrd-clr-gray;
+            border: none;
+            border-radius: 20px;
+            @include box-shadow($bckgrd-clr-dgray);
+            font-size: 18px;
+            .fas{
+                color: #7E7E7E;
+            }
+            .invis .fas{
+                color: $bckgrd-clr-gray;
+            }
+            &:hover{
+                @include box-shadow-hover($bckgrd-clr-dgray);
+                background-color: lighten($color-primary, 35%);
+                & .fas{
+                    color: $color-primary;
+                }
+                & .invis .fas{
+                    color: lighten($color-primary, 35%);
+                }
+            }
+        }
+    }
+}
+
+.restaurants{
+    padding: 2em 5%;
+    background-color: $bckgrd-clr-gray;
+    .restaurants__cards{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card{
+        width: 100%;
+        margin: 0.5em 0;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        border-radius: 25px;
+        position: relative;
+        @include box-shadow(#E5E5E5);
+        @include tablet{
+            width: 49%;
+        }
+        @include desktop{
+            width: 24%;
+        }
+        &__img{
+            border-radius: 25px 25px 0 0px;
+            object-fit: cover;
+            object-position: center;
+            height: 200px;
+        }
+        &__banner{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+        }
+        &__txt{
+            margin: 0 0 1em 1em;
+        }
+        &:hover{
+            @include box-shadow-hover(#E5E5E5);
+        }
+    }
+    .notif{
+        @extend %notif;
+    }
+}
