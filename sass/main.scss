@@ -1,13 +1,12 @@
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins";
-@import "./utils/extensions";
 @import "./base/base";
 @import "./base/typography";
+@import "./themes/loading-spinner";
 @import "./components/buttons";
-@import "./components/loading-spinner";
 @import "./components/appearance-delay";
 @import "./components/checkout-item";
+@import "./components/notification-box";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./pages/index";

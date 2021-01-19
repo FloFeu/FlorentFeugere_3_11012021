@@ -50,7 +50,7 @@ section.menu{
             border: none;
             border-radius: 20px;
             @include box-shadow($bckgrd-clr-dgray);
-            font-size: 19px;
+            font-size: 18px;
             .fas{
                 color: #7E7E7E;
             }
@@ -82,7 +82,7 @@ section.menu{
     .card{
         width: 100%;
         margin: 0.5em 0;
-        // opacity: 0;
+        opacity: 0;
         display: flex;
         flex-direction: column;
         background-color: #FFFFFF;

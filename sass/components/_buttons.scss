@@ -1,14 +1,16 @@
+// ** BOUTONS EXPLORER ET COMMANDER **//
+
 .nav__btn{
     color: #fff;
     padding: 0.8em 2em;
     border-radius: 45px;
     border: hidden;
-    font-size: 19px;
-    width: 90%;
-    max-width: 400px;
+    font-size: 18px;
+    width: 50%;
+    max-width: 450px;
+    cursor: pointer;
     @include tablet{
         max-width: 500px;
-        
     }
     @include box-shadow(#C5C5C5);
     background-image: linear-gradient($color-secondary, $color-primary);   
@@ -19,6 +21,7 @@
 }
 
 // ** COEUR EN DEGRADE ** //
+
 .fa-stack{
     margin: auto 0;
     .far{
@@ -33,7 +36,6 @@
         color: transparent;
         background-image: linear-gradient($color-primary, $color-secondary);
         transition: opacity 300ms 15ms ease-in-out ;
-        
     }
     &:hover{
         .far{

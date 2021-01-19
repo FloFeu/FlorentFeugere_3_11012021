@@ -1,92 +1,83 @@
 .menu__body{
     background-color: $bckgrd-clr-gray;
-    header{
-        background-color: white;
-    }
-}
-
-.page__section{
-    @include desktop{
-        padding: 1em 10%;
-    }
-    position: relative;
-    top: -50px;
-    border-radius: 25px 25px 0 0;
-    background-color: $bckgrd-clr-gray;
-    padding: 1em;
-    .title{
-        display: flex;
-        justify-content: space-between;
-        padding-right: 1em;
-        padding-bottom: 1em;        
-        h1{
-            @extend %restaurant-name;
-            margin: auto 0;
-
+    .page__section{
+        padding: 2em 5%;
+        position: relative;
+        top: -50px;
+        border-radius: 25px 25px 0 0;
+        background-color: $bckgrd-clr-gray;
+        .title{
+            display: flex;
+            justify-content: space-between;        
+            h1{
+                @extend %restaurant-name;
+            }
         }
-    }
-    h4::before{
-        content: "";
-        position: absolute;
-        background-color: $color-tertiary;
-        width: 35px;
-        height: 3px;
-        bottom: -4px;
-    }
-    .menus{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: baseline;
-        &__menu{
-            width: 350px;
-            margin: 5px;
+        .menus{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: baseline;
             @include desktop{
-                width: 30%;
+                justify-content: space-between;
             }
-            .menu__card{
-                opacity: 0;
-                background-color: white;
-                margin: 1em 0;
-                border-radius: 20px;
-                display: grid;
-                grid-template-areas: "title ." "description price";
-                grid-template-columns: auto min-content min-content;
-                grid-gap: 5px;
-                overflow:hidden;
-                @include box-shadow(#E8E8E8);
-                
-                .menu__card--title{
-                    padding-top: 0.8em;
-                    padding-left: 0.8em;
-                    grid-area: title;
-                    font-weight:600;
+            &__menu{
+                width: 100%;
+                @include tablet{
+                    width: 75%;
+                }
+                @include desktop{
+                    width: 32%;
+                }
+                h4::before{
+                    content: "";
+                    position: absolute;
+                    background-color: $color-tertiary;
+                    width: 35px;
+                    height: 3px;
+                    bottom: -5px;
+                }
+                .menu__card{
+                    opacity: 0;
+                    background-color: white;
+                    margin: 1em 0;
+                    border-radius: 20px;
+                    display: grid;
+                    grid-template-areas: "title ." "description price";
+                    grid-template-columns: auto min-content min-content;
+                    grid-gap: 1em;
                     overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
+                    @include box-shadow(#E8E8E8);
+                    cursor: pointer;
+                    .menu__card--title{
+                        grid-area: title;
+                        padding-top: 1em;
+                        padding-left: 1em;
+                        font-weight:600;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    .menu__card--description{
+                        grid-area: description;
+                        padding-bottom: 1em;
+                        padding-left: 1em;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    .menu__card--price{
+                        grid-area: price;
+                        padding-bottom: 1em;
+                        padding-right: 1em;
+                        justify-self: end;
+                    }
                 }
-                .menu__card--description{
-                    padding-bottom: 0.8em;
-                    padding-left: 0.8em;
-                    grid-area: description;
-                    font-weight: 200;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                }
-                .menu__card--price{
-                    padding-bottom: 0.8em;
-                    padding-right: 1.5em;
-                    grid-area: price;
-                    justify-self: end;
-                    font-weight: 600;
-                }
-
             }
         }
-    }
-    .order__btn{
-        text-align: center;
-        padding-top: 1em;
+        .order__btn{
+            text-align: center;
+            padding-top: 2em;
+        }
     }
 }
